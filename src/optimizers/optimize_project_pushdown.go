@@ -8,7 +8,7 @@ import (
 	"github.com/CC11001100/vectorsql/src/planners"
 )
 
-// 映射下推，不读取多余的列 
+// ProjectPushDownOptimizer 映射下推，不读取多余的列
 var ProjectPushDownOptimizer = Optimizer{
 	Name:        "ProjectPushDownOptimizer",
 	Description: "Push projects to scan plan",

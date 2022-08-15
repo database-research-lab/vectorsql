@@ -8,7 +8,7 @@ import (
 	"github.com/CC11001100/vectorsql/src/planners"
 )
 
-// 谓词下推优化器，把filter条件往树上方移动 
+// PredicatePushDownOptimizer 谓词下推优化器，把filter条件往树上方移动
 var PredicatePushDownOptimizer = Optimizer{
 	Name:        "PredicatePushDownOptimizer",
 	Description: "Push predicates to scan plan",
