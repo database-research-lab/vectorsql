@@ -5,9 +5,11 @@
 package databases
 
 import (
-	"storages"
+	//"storages"
 
-	"parsers/sqlparser"
+	//"parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/storages"
 )
 
 type MetaFuns struct {

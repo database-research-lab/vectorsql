@@ -5,12 +5,12 @@
 package system
 
 import (
-	"base/errors"
-	"columns"
-	"datablocks"
-	"datastreams"
-	"datatypes"
-	"sessions"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datastreams"
+	"github.com/CC11001100/vectorsql/src/datatypes"
+	"github.com/CC11001100/vectorsql/src/sessions"
 )
 
 type SystemTablesStorage struct {

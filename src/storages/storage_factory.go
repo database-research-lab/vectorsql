@@ -5,11 +5,11 @@
 package storages
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/columns"
 	"strings"
 
-	"columns"
 
-	"base/errors"
 )
 
 type storageCreator func(*StorageContext, []*columns.Column) IStorage

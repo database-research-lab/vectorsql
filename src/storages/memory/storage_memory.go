@@ -5,12 +5,13 @@
 package storages
 
 import (
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datastreams"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"sync"
 
-	"columns"
-	"datablocks"
-	"datastreams"
-	"sessions"
+
 )
 
 type MemoryStorage struct {

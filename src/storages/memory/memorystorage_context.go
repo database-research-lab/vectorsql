@@ -5,9 +5,8 @@
 package storages
 
 import (
-	"config"
-
-	"base/xlog"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
 )
 
 type MemoryStorageContext struct {

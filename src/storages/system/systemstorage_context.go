@@ -5,10 +5,9 @@
 package system
 
 import (
-	"config"
-	"datablocks"
-
-	"base/xlog"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/datablocks"
 )
 
 type (

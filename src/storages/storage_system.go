@@ -5,9 +5,8 @@
 package storages
 
 import (
-	"columns"
-
-	"storages/system"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/storages/system"
 )
 
 const (
