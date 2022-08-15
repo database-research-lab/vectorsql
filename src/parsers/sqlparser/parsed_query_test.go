@@ -21,12 +21,12 @@ limitations under the License.
 package sqlparser
 
 import (
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"reflect"
 	"testing"
 
-	"parsers/sqlparser/dependency/sqltypes"
 
-	querypb "parsers/sqlparser/dependency/query"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 )
 
 func TestNewParsedQuery(t *testing.T) {

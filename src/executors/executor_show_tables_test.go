@@ -5,13 +5,14 @@
 package executors
 
 import (
-	"mocks"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datatypes"
+	"github.com/CC11001100/vectorsql/src/mocks"
+	"github.com/CC11001100/vectorsql/src/planners"
 	"testing"
 
-	"columns"
-	"datablocks"
-	"datatypes"
-	"planners"
+
 
 	"github.com/stretchr/testify/assert"
 )

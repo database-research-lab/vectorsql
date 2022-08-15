@@ -6,13 +6,14 @@ package datablocks
 
 import (
 	"expvar"
+	"github.com/CC11001100/vectorsql/src/base/metric"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datatypes"
+	"github.com/CC11001100/vectorsql/src/datavalues"
+	"github.com/CC11001100/vectorsql/src/expressions"
 	"time"
 
-	"base/metric"
-	"columns"
-	"datatypes"
-	"datavalues"
-	"expressions"
+
 )
 
 func (block *DataBlock) Append(blocks ...*DataBlock) error {

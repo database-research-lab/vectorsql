@@ -21,9 +21,9 @@ limitations under the License.
 package sqltypes
 
 import (
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"testing"
 
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 func TestTypeValues(t *testing.T) {

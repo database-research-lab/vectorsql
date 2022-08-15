@@ -5,8 +5,8 @@
 package planners
 
 import (
-	"base/errors"
-	"expressions"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/expressions"
 )
 
 type IPlan interface {

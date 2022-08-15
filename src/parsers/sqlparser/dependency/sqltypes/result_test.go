@@ -21,10 +21,10 @@ limitations under the License.
 package sqltypes
 
 import (
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"reflect"
 	"testing"
 
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 func TestRepair(t *testing.T) {

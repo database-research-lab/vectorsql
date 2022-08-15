@@ -6,11 +6,10 @@ package executors
 
 import (
 	"fmt"
-
-	"databases"
-	"planners"
-	"processors"
-	"transforms"
+	"github.com/CC11001100/vectorsql/src/databases"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/transforms"
 )
 
 type ScanExecutor struct {

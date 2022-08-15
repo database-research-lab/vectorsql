@@ -5,10 +5,10 @@
 package dataformats
 
 import (
+	"github.com/CC11001100/vectorsql/src/datablocks"
 	"io"
 	"sync"
 
-	"datablocks"
 )
 
 type TSVOutputFormat struct {

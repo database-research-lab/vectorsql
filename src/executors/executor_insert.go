@@ -5,8 +5,8 @@
 package executors
 
 import (
-	"databases"
-	"planners"
+	"github.com/CC11001100/vectorsql/src/databases"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
 type InsertExecutor struct {

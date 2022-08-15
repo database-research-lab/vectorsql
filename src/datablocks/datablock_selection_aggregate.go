@@ -5,10 +5,10 @@
 package datablocks
 
 import (
+	"github.com/CC11001100/vectorsql/src/expressions"
+	"github.com/CC11001100/vectorsql/src/planners"
 	"sync"
 
-	"expressions"
-	"planners"
 
 	"github.com/gammazero/workerpool"
 )

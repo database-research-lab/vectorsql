@@ -5,9 +5,8 @@
 package databases
 
 import (
-	"storages"
-
-	"parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/storages"
 )
 
 const (

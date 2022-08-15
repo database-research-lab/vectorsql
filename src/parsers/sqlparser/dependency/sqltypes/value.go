@@ -25,13 +25,12 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/bytes2"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/hack"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"strconv"
 	"time"
 
-	"parsers/sqlparser/dependency/bytes2"
-	"parsers/sqlparser/dependency/hack"
-
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 var (

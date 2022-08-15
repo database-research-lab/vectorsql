@@ -6,12 +6,11 @@
 package planners
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 	"reflect"
 	"strconv"
 	"strings"
-
-	"base/errors"
-	"parsers/sqlparser"
 )
 
 // 解析AST上的表达式为逻辑执行计划 

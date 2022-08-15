@@ -5,12 +5,10 @@
 package executors
 
 import (
-	"mocks"
-	"testing"
-
-	"planners"
-
+	"github.com/CC11001100/vectorsql/src/mocks"
+	"github.com/CC11001100/vectorsql/src/planners"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestUseExecutor(t *testing.T) {

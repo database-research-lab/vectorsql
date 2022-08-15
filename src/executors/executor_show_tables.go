@@ -5,9 +5,9 @@
 package executors
 
 import (
-	"parsers"
-	"parsers/sqlparser"
-	"planners"
+	"github.com/CC11001100/vectorsql/src/parsers"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
 func NewShowTablesExecutor(ctx *ExecutorContext, plan planners.IPlan) IExecutor {

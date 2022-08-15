@@ -5,10 +5,9 @@
 package databases
 
 import (
-	"config"
-	"storages"
-
-	"parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/storages"
 )
 
 type Table struct {

@@ -24,11 +24,11 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"strconv"
 
 	"github.com/golang/protobuf/proto"
 
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 // NullBindVariable is a bindvar with NULL value.

@@ -5,19 +5,17 @@
 package databases
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datatypes"
+	"github.com/CC11001100/vectorsql/src/parsers"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/storages"
 	"os"
 	"sync"
 
 	"io/ioutil"
 	"path/filepath"
-
-	"columns"
-	"datatypes"
-	"parsers"
-	"storages"
-
-	"base/errors"
-	"parsers/sqlparser"
 )
 
 type OnDiskDatabase struct {

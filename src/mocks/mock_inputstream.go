@@ -5,9 +5,9 @@
 package mocks
 
 import (
+	"github.com/CC11001100/vectorsql/src/datablocks"
 	"sync"
 
-	"datablocks"
 )
 
 type MockBlockInputStream struct {

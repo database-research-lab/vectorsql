@@ -22,11 +22,11 @@ package sqltypes
 
 import (
 	"bytes"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"reflect"
 	"strings"
 	"testing"
 
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 const (

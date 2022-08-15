@@ -21,9 +21,8 @@ limitations under the License.
 package sqltypes
 
 import (
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"github.com/golang/protobuf/proto"
-
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 // This file contains the proto3 conversion functions for the structures

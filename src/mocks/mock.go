@@ -6,13 +6,13 @@ package mocks
 
 import (
 	"context"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/databases"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"os"
 	"sync"
 
-	"base/xlog"
-	"config"
-	"databases"
-	"sessions"
 )
 
 var once sync.Once

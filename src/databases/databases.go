@@ -5,17 +5,19 @@
 package databases
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/parsers"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 	"sync"
 
-	"config"
-	"parsers"
+
 
 	"io/ioutil"
 	"path/filepath"
 
-	"base/errors"
-	"base/xlog"
-	"parsers/sqlparser"
+
 )
 
 type Databases struct {

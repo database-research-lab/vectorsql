@@ -5,7 +5,7 @@
 package datastreams
 
 import (
-	"datablocks"
+	"github.com/CC11001100/vectorsql/src/datablocks"
 )
 
 type ChannelBlockInputStream struct {

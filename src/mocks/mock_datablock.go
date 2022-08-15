@@ -5,11 +5,11 @@
 package mocks
 
 import (
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 	"reflect"
 
-	"columns"
-	"datablocks"
-	"datavalues"
 )
 
 func NewBlockFromSlice(cols []*columns.Column, datas ...[]interface{}) *datablocks.DataBlock {

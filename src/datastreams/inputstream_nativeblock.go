@@ -5,12 +5,12 @@
 package datastreams
 
 import (
-	"base/binary"
-	"base/errors"
-	"columns"
-	"datablocks"
-	"datatypes"
-	"datavalues"
+	"github.com/CC11001100/vectorsql/src/base/binary"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datatypes"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 )
 
 type NativeBlockInputStream struct {

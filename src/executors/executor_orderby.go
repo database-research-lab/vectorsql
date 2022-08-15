@@ -6,10 +6,9 @@ package executors
 
 import (
 	"fmt"
-
-	"planners"
-	"processors"
-	"transforms"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/transforms"
 )
 
 type OrderByExecutor struct {

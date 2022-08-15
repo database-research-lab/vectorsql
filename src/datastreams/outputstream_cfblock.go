@@ -5,11 +5,11 @@
 package datastreams
 
 import (
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/dataformats"
 	"io"
 	"sync"
 
-	"datablocks"
-	"dataformats"
 )
 
 type CustomFormatBlockOutputStream struct {

@@ -5,7 +5,7 @@
 package executors
 
 import (
-	"processors"
+	"github.com/CC11001100/vectorsql/src/processors"
 )
 
 // 是为了把查询抽象成树方便执行吧？

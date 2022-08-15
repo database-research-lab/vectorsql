@@ -5,11 +5,11 @@
 package datablocks
 
 import (
-	"columns"
-	"datatypes"
-	"datavalues"
-	"expressions"
-	"planners"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datatypes"
+	"github.com/CC11001100/vectorsql/src/datavalues"
+	"github.com/CC11001100/vectorsql/src/expressions"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
 func (block *DataBlock) NormalSelectionByPlan(fields []string, plan *planners.SelectionPlan) (*DataBlock, error) {

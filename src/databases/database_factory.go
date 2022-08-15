@@ -5,15 +5,15 @@
 package databases
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/storages"
 	"strings"
 	"sync"
 
-	"config"
-	"storages"
 
-	"base/errors"
-	"base/xlog"
-	"parsers/sqlparser"
 )
 
 var (

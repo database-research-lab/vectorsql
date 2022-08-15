@@ -18,10 +18,9 @@ limitations under the License.
 package sqltypes
 
 import (
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"reflect"
-
 	"github.com/golang/protobuf/proto"
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 // Result represents a query result.

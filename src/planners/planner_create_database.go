@@ -6,9 +6,8 @@ package planners
 
 import (
 	"fmt"
-
-	"base/errors"
-	"parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 )
 
 // 创建数据库的Plan 

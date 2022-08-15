@@ -6,9 +6,8 @@ package planners
 
 import (
 	"encoding/json"
-	"parsers"
-
-	"parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/parsers"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 )
 
 type ShowTablesPlan struct {

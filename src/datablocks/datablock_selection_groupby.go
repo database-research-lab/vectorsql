@@ -5,11 +5,12 @@
 package datablocks
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/collections"
+	"github.com/CC11001100/vectorsql/src/expressions"
+	"github.com/CC11001100/vectorsql/src/planners"
 	"strings"
 
-	"base/collections"
-	"expressions"
-	"planners"
+
 )
 
 func (block *DataBlock) GroupBySelectionByPlan(plan *planners.SelectionPlan) (*collections.HashMap, error) {

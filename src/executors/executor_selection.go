@@ -6,11 +6,10 @@ package executors
 
 import (
 	"fmt"
-
-	"base/errors"
-	"planners"
-	"processors"
-	"transforms"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/transforms"
 )
 
 type SelectionExecutor struct {

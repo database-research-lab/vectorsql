@@ -23,9 +23,8 @@ package sqltypes
 import (
 	"bytes"
 	"fmt"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"strings"
-
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 // Functions in this file should only be used for testing.

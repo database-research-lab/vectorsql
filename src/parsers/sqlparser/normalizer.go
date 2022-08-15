@@ -22,10 +22,9 @@ package sqlparser
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 
-	"parsers/sqlparser/dependency/sqltypes"
-
-	querypb "parsers/sqlparser/dependency/query"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 )
 
 // Normalize changes the statement to use bind values, and

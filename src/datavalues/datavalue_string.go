@@ -5,10 +5,10 @@
 package datavalues
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/docs"
+	"github.com/CC11001100/vectorsql/src/base/errors"
 	"unsafe"
 
-	"base/docs"
-	"base/errors"
 )
 
 type ValueString string

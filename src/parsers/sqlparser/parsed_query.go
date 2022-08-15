@@ -23,11 +23,11 @@ package sqlparser
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"strings"
 
-	"parsers/sqlparser/dependency/sqltypes"
 
-	querypb "parsers/sqlparser/dependency/query"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 )
 
 // ParsedQuery represents a parsed query where

@@ -5,10 +5,10 @@
 package planners
 
 import (
+	"github.com/CC11001100/vectorsql/src/parsers"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 	"testing"
 
-	"parsers"
-	"parsers/sqlparser"
 
 	"github.com/stretchr/testify/assert"
 )

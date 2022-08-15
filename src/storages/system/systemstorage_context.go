@@ -14,6 +14,7 @@ type (
 	TablesFillFunc    func(*datablocks.DataBlock) error
 	DatabasesFillFunc func(*datablocks.DataBlock) error
 )
+
 type SystemStorageContext struct {
 	log               *xlog.Log
 	conf              *config.Config

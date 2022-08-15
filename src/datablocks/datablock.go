@@ -6,11 +6,11 @@ package datablocks
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 	"sync"
 
-	"base/errors"
-	"columns"
-	"datavalues"
 )
 
 type DataBlock struct {

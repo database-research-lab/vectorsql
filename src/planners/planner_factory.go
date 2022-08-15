@@ -5,10 +5,9 @@
 package planners
 
 import (
-	"parsers"
-
-	"base/errors"
-	"parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/parsers"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 )
 
 // planner的入口，用于为SQL查询生成执行计划  

@@ -5,7 +5,7 @@
 package dataformats
 
 import (
-	"datablocks"
+	"github.com/CC11001100/vectorsql/src/datablocks"
 )
 
 type IDataBlockInputFormat interface {

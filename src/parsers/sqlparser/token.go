@@ -24,10 +24,10 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/bytes2"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"io"
 
-	"parsers/sqlparser/dependency/bytes2"
-	"parsers/sqlparser/dependency/sqltypes"
 )
 
 const (

@@ -23,9 +23,8 @@ package sqltypes
 import (
 	"bytes"
 	"fmt"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 	"strconv"
-
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 // numeric represents a numeric value extracted from

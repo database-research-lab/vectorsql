@@ -5,10 +5,10 @@
 package transforms
 
 import (
-	"datablocks"
-	"planners"
-	"processors"
-	"sessions"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"time"
 
 	"github.com/gammazero/workerpool"

@@ -5,12 +5,12 @@
 package databases
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
+	"github.com/CC11001100/vectorsql/src/storages"
 	"path/filepath"
 	"sync"
 
-	"base/errors"
-	"parsers/sqlparser"
-	"storages"
 )
 
 const (

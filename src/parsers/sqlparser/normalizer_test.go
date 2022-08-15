@@ -22,12 +22,12 @@ package sqlparser
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"reflect"
 	"testing"
 
-	"parsers/sqlparser/dependency/sqltypes"
 
-	querypb "parsers/sqlparser/dependency/query"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 )
 
 func TestNormalize(t *testing.T) {

@@ -5,15 +5,14 @@
 package transforms
 
 import (
-	"sessions"
+	"github.com/CC11001100/vectorsql/src/base/collections"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/expressions"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"sync"
 	"time"
-
-	"base/collections"
-	"datablocks"
-	"expressions"
-	"planners"
-	"processors"
 
 	"github.com/gammazero/workerpool"
 )

@@ -5,12 +5,12 @@
 package transforms
 
 import (
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"time"
 
-	"datablocks"
-	"planners"
-	"processors"
-	"sessions"
 )
 
 type ProjectionTransform struct {

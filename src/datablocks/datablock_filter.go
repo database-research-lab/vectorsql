@@ -5,9 +5,9 @@
 package datablocks
 
 import (
-	"datavalues"
-	"expressions"
-	"planners"
+	"github.com/CC11001100/vectorsql/src/datavalues"
+	"github.com/CC11001100/vectorsql/src/expressions"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
 func (block *DataBlock) FilterByPlan(fields []string, plan *planners.FilterPlan) error {

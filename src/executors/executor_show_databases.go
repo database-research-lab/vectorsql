@@ -5,7 +5,7 @@
 package executors
 
 import (
-	"planners"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
 func NewShowDatabasesExecutor(ctx *ExecutorContext, plan planners.IPlan) IExecutor {

@@ -5,7 +5,7 @@
 package sqltypes
 
 import (
-	querypb "parsers/sqlparser/dependency/query"
+	querypb "github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
 )
 
 // EventTokenMinimum returns an event token that is guaranteed to

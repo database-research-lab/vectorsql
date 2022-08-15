@@ -6,14 +6,13 @@ package transforms
 
 import (
 	"context"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datatypes"
+	"github.com/CC11001100/vectorsql/src/mocks"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
 	"testing"
-
-	"columns"
-	"datablocks"
-	"datatypes"
-	"mocks"
-	"planners"
-	"processors"
 
 	"github.com/stretchr/testify/assert"
 )

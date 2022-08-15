@@ -5,8 +5,8 @@
 package executors
 
 import (
-	"base/errors"
-	"planners"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
 // 查询执行器 
