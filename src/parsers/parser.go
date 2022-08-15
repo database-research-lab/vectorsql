@@ -5,9 +5,9 @@
 package parsers
 
 import (
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 	"strings"
 
-	"parsers/sqlparser"
 )
 
 func Parse(sql string) (sqlparser.Statement, error) {

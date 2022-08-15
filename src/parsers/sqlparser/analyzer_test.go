@@ -21,11 +21,11 @@ limitations under the License.
 package sqlparser
 
 import (
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"reflect"
 	"strings"
 	"testing"
 
-	"parsers/sqlparser/dependency/sqltypes"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -10,6 +10,7 @@ import (
 	"time"
 )
 
+// 
 type (
 	NextFunc     func(interface{})
 	DoneFunc     func()

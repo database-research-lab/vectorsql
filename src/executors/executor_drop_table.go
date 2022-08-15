@@ -9,6 +9,7 @@ import (
 	"planners"
 )
 
+// 删除表执行器 
 type DropTableExecutor struct {
 	ctx  *ExecutorContext
 	plan *planners.DropTablePlan

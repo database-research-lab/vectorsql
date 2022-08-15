@@ -21,10 +21,10 @@ limitations under the License.
 package sqlparser
 
 import (
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"strings"
 	"testing"
 
-	"parsers/sqlparser/dependency/sqltypes"
 )
 
 func TestEncodable(t *testing.T) {

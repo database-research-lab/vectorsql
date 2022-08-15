@@ -21,9 +21,9 @@ limitations under the License.
 package sqlparser
 
 import (
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"strings"
 
-	"parsers/sqlparser/dependency/sqltypes"
 )
 
 // This file contains types that are 'Encodable'.

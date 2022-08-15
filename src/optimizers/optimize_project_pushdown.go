@@ -5,9 +5,10 @@
 package optimizers
 
 import (
-	"planners"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
+// 映射下推，不读取多余的列 
 var ProjectPushDownOptimizer = Optimizer{
 	Name:        "ProjectPushDownOptimizer",
 	Description: "Push projects to scan plan",
@@ -28,6 +29,7 @@ var ProjectPushDownOptimizer = Optimizer{
 			return
 		}
 
+		// 歪日这么实现真的正确吗... 
 		if scan != nil && project != nil {
 			scan.Project = project
 		}

@@ -8,9 +8,14 @@ import (
 	"encoding/json"
 )
 
+// 
 type AliasedExpressionPlan struct {
 	Name string
+
+	// 变量的名称 
 	As   string
+
+	// 变量的计算方式 
 	Expr IPlan
 }
 

@@ -28,14 +28,17 @@ func (s *HTTPHandler) processQuery(query string, rw io.Writer) (err error) {
 
 	log.Debug("HTTPHandler-Query->Enter:%+v", query)
 
+	// 为查询生成逻辑执行计划 
 	// Logical plans.
 	plan, err := planners.PlanFactory(query)
 	if err != nil {
 		log.Error("%+v", err)
 		return err
 	}
+	// 优化生成的执行计划  
 	plan = optimizers.Optimize(plan, optimizers.DefaultOptimizers)
 
+	// 真正开始执行  
 	// Executors.
 	ectx := executors.NewExecutorContext(ctx, log, conf, session)
 	executor, err := executors.ExecutorFactory(ectx, plan)

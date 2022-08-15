@@ -5,9 +5,9 @@
 package optimizers
 
 import (
+	"github.com/CC11001100/vectorsql/src/planners"
 	"testing"
 
-	"planners"
 
 	"github.com/stretchr/testify/assert"
 )

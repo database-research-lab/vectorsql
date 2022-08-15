@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 )
 
+// 用来连接Plan和Subplan，连接成一颗树 
 type MapPlan struct {
 	Name     string
 	SubPlans []IPlan `json:",omitempty"`

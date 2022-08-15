@@ -11,6 +11,7 @@ import (
 	"parsers/sqlparser"
 )
 
+// 创建数据库的Plan 
 type CreateDatabasePlan struct {
 	Ast *sqlparser.DBDDL
 }

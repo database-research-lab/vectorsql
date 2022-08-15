@@ -8,10 +8,17 @@ import (
 	"encoding/json"
 )
 
+// 用来组合两个Plan 
 type BinaryExpressionPlan struct {
 	Name     string
+
+	// 这里认为是函数才会有二元操作，所以需要一个函数的名字 
 	FuncName string
+
+	// 第一个操作单元 
 	Left     IPlan
+
+	// 
 	Right    IPlan
 }
 

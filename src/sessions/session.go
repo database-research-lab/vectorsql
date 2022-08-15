@@ -6,6 +6,7 @@ package sessions
 
 import "sync"
 
+// 查询的会话信息，用于统计做成本优化之类的 
 type Session struct {
 	mu       sync.Mutex
 	id       uint64

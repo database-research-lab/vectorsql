@@ -9,6 +9,7 @@ import (
 	"planners"
 )
 
+// 删除数据库执行器 
 type DropDatabaseExecutor struct {
 	ctx  *ExecutorContext
 	plan *planners.DropDatabasePlan

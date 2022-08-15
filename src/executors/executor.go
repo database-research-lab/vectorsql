@@ -5,15 +5,21 @@
 package executors
 
 import (
-	"datastreams"
-	"processors"
+	"github.com/CC11001100/vectorsql/src/datastreams"
+	"github.com/CC11001100/vectorsql/src/processors"
 )
 
+// IExecutor 定义了执行器方法
 type IExecutor interface {
+
+	// String 执行器会有一个名字
 	String() string
+
+	// Execute 封装真正执行的逻辑
 	Execute() (*Result, error)
 }
 
+// Result 表示执行器的执行结果
 type Result struct {
 	In  processors.IProcessor
 	Out datastreams.IDataBlockOutputStream

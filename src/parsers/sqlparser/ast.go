@@ -25,13 +25,13 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/query"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"io"
 	"strings"
 	"sync"
 
-	"parsers/sqlparser/dependency/sqltypes"
 
-	querypb "parsers/sqlparser/dependency/query"
 )
 
 // parserPool is a pool for parser objects.
@@ -1227,7 +1227,7 @@ func (ct *ColumnType) DescribeType() string {
 }
 
 // SQLType returns the sqltypes type code for the given column
-func (ct *ColumnType) SQLType() querypb.Type {
+func (ct *ColumnType) SQLType() query.Type {
 	switch ct.Type {
 	case keywordStrings[TINYINT]:
 		if ct.Unsigned {

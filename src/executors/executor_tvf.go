@@ -6,22 +6,32 @@ package executors
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datastreams"
+	"github.com/CC11001100/vectorsql/src/datatypes"
+	"github.com/CC11001100/vectorsql/src/datavalues"
+	"github.com/CC11001100/vectorsql/src/expressions"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/transforms"
 	"strings"
 	"time"
 
-	"columns"
-	"datablocks"
-	"datastreams"
-	"datatypes"
-	"datavalues"
-	"expressions"
-	"planners"
-	"processors"
-	"transforms"
+	//"columns"
+	//"datablocks"
+	//"datastreams"
+	//"datatypes"
+	//"datavalues"
+	//"expressions"
+	//"planners"
+	//"processors"
+	//"transforms"
 
 	"github.com/gammazero/workerpool"
 )
 
+// TableValuedFunctionExecutor 函数执行器
 type TableValuedFunctionExecutor struct {
 	ctx         *ExecutorContext
 	plan        *planners.TableValuedFunctionPlan

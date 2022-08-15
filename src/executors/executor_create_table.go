@@ -5,10 +5,11 @@
 package executors
 
 import (
-	"databases"
-	"planners"
+	"github.com/CC11001100/vectorsql/src/databases"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
+// 创建表执行器
 type CreateTableExecutor struct {
 	ctx  *ExecutorContext
 	plan *planners.CreateTablePlan

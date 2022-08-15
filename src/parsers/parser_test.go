@@ -6,9 +6,9 @@ package parsers
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 	"testing"
 
-	"parsers/sqlparser"
 
 	"github.com/stretchr/testify/assert"
 )

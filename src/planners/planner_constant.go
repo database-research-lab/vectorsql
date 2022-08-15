@@ -8,8 +8,11 @@ import (
 	"encoding/json"
 )
 
+// 返回固定的常量值 
 type ConstantPlan struct {
 	Name  string
+
+	// 要返回的值 
 	Value interface{}
 }
 

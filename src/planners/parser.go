@@ -14,8 +14,15 @@ import (
 	"parsers/sqlparser"
 )
 
+// 解析AST上的表达式为逻辑执行计划 
+// alias: 
+// expr: 表达式所对应的AST节点 
 func parseExpression(aliases map[string]IPlan, expr sqlparser.Expr) (IPlan, error) {
+
+	// 根据不同的表达式的类型会生成不同的执行计划 
 	switch expr := expr.(type) {
+
+	// 列名表达式 
 	case *sqlparser.ColName:
 		name := expr.Name.String()
 		if aliases != nil {
@@ -24,10 +31,13 @@ func parseExpression(aliases map[string]IPlan, expr sqlparser.Expr) (IPlan, erro
 			}
 		}
 		return NewVariablePlan(name), nil
+
+	// 字面值常量的形式 
 	case *sqlparser.SQLVal:
 		var err error
 		var val interface{}
-
+		
+		// 根据常量的不同类型，转换为对应的值 
 		switch expr.Type {
 		case sqlparser.IntVal:
 			var i int64
@@ -43,8 +53,12 @@ func parseExpression(aliases map[string]IPlan, expr sqlparser.Expr) (IPlan, erro
 		if err != nil {
 			return nil, err
 		}
+		// 然后返回一个ConstantPlan，执行的时候就原样返回自己持有的值 
 		return NewConstantPlan(val), nil
+
+	// 函数表达式，这样就可以加一些自定义的函数之类的 
 	case *sqlparser.FuncExpr:
+		// 函数名统一转换为大写 
 		funcName := strings.ToUpper(expr.Name.String())
 		switch len(expr.Exprs) {
 		case 1:
@@ -78,6 +92,7 @@ func parseExpression(aliases map[string]IPlan, expr sqlparser.Expr) (IPlan, erro
 			}
 			return NewFunctionExpressionPlan(funcName, args...), nil
 		}
+
 	case *sqlparser.BinaryExpr:
 		left, err := parseExpression(aliases, expr.Left)
 		if err != nil {
@@ -88,6 +103,7 @@ func parseExpression(aliases map[string]IPlan, expr sqlparser.Expr) (IPlan, erro
 			return nil, err
 		}
 		return NewBinaryExpressionPlan(expr.Operator, left, right), nil
+
 	case *sqlparser.ComparisonExpr:
 		left, err := parseExpression(aliases, expr.Left)
 		if err != nil {
@@ -98,6 +114,7 @@ func parseExpression(aliases map[string]IPlan, expr sqlparser.Expr) (IPlan, erro
 			return nil, err
 		}
 		return NewBinaryExpressionPlan(expr.Operator, left, right), nil
+
 	case *sqlparser.OrExpr:
 		left, err := parseExpression(aliases, expr.Left)
 		if err != nil {
@@ -108,6 +125,7 @@ func parseExpression(aliases map[string]IPlan, expr sqlparser.Expr) (IPlan, erro
 			return nil, err
 		}
 		return NewBinaryExpressionPlan("OR", left, right), nil
+
 	case *sqlparser.AndExpr:
 		left, err := parseExpression(aliases, expr.Left)
 		if err != nil {
@@ -118,9 +136,11 @@ func parseExpression(aliases map[string]IPlan, expr sqlparser.Expr) (IPlan, erro
 			return nil, err
 		}
 		return NewBinaryExpressionPlan("AND", left, right), nil
+		
 	case *sqlparser.ParenExpr:
 		return parseExpression(aliases, expr.Expr)
 	}
+
 	return nil, errors.Errorf("Unsupported expression %+v %+v", expr, reflect.TypeOf(expr))
 }
 
@@ -132,6 +152,7 @@ func parseFunctionArgument(aliases map[string]IPlan, expr *sqlparser.AliasedExpr
 	return subExpr, nil
 }
 
+// 带别名的查询方式 
 func parseAliasedTableExpression(expr *sqlparser.AliasedTableExpr) (IPlan, error) {
 	switch subExpr := expr.Expr.(type) {
 	case sqlparser.TableName:
@@ -170,12 +191,17 @@ func parseTableValuedFunctionArgument(aliases map[string]IPlan, expr *sqlparser.
 	}
 }
 
+// 解析from查询 
 func parseFrom(expr sqlparser.TableExpr) (IPlan, error) {
+	// from可能会有多种形式 
 	switch expr := expr.(type) {
+	// 带别名的方式查询 
 	case *sqlparser.AliasedTableExpr:
 		return parseAliasedTableExpression(expr)
+	// 这个是啥类型呢 
 	case *sqlparser.ParenTableExpr:
 		return parseFrom(expr.Exprs[0])
+	// 这个又是啥类型呢 
 	case *sqlparser.TableValuedFunction:
 		return parseTableValuedFunction(nil, expr)
 	default:
@@ -183,28 +209,38 @@ func parseFrom(expr sqlparser.TableExpr) (IPlan, error) {
 	}
 }
 
+// 解析查询的字段都有哪些，解析的时候会考虑变量表 
 func parseFields(aliased map[string]IPlan, sel sqlparser.SelectExprs) (*MapPlan, error) {
+
 	fields := NewMapPlan()
 
+	// 如果不是*的话，则对每个字段做转换 
 	if _, ok := sel[0].(*sqlparser.StarExpr); !ok {
 		for i, expr := range sel {
+			
 			aliasedExpression, ok := expr.(*sqlparser.AliasedExpr)
 			if !ok {
 				return nil, errors.Errorf("Expected aliased expression in select on index:%v, got:%+v %+v", i, expr, reflect.TypeOf(expr))
 			}
+
 			child, err := parseExpression(aliased, aliasedExpression.Expr)
 			if err != nil {
 				return nil, err
 			}
+
 			if aliasedExpression.As.String() != "" {
 				child = NewAliasedExpressionPlan(aliasedExpression.As.String(), child)
 			}
+
 			fields.Add(child)
 		}
 	}
+
+	// 如果是*选择所有字段的的话，则直接返回，认为是一个字段就行了，后面ProjectionPlan能够识别得出来并转换  
 	return fields, nil
 }
 
+// 把别名生成一个map是啥意思，是为了让别的地方能够引用得到这些别名吗 
 func parseAliases(fields *MapPlan) (map[string]IPlan, error) {
 	aliases := make(map[string]IPlan)
 	if err := fields.Walk(func(plan IPlan) (bool, error) {

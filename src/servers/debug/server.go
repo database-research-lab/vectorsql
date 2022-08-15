@@ -7,16 +7,16 @@ package debug
 import (
 	"expvar"
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/metric"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
 	"runtime"
 	"time"
 
 	"net/http"
 	_ "net/http/pprof"
 
-	"config"
 
-	"base/metric"
-	"base/xlog"
 )
 
 type DebugServer struct {

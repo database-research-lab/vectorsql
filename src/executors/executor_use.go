@@ -5,10 +5,11 @@
 package executors
 
 import (
-	"databases"
-	"planners"
+	"github.com/CC11001100/vectorsql/src/databases"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
+// UseExecutor 切换数据库的执行器
 type UseExecutor struct {
 	ctx  *ExecutorContext
 	plan *planners.UsePlan
@@ -21,6 +22,7 @@ func NewUseExecutor(ctx *ExecutorContext, plan planners.IPlan) IExecutor {
 	}
 }
 
+// Execute 切换数据库
 func (executor *UseExecutor) Execute() (*Result, error) {
 	ectx := executor.ctx
 	plan := executor.plan

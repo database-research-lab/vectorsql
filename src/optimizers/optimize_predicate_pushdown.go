@@ -5,9 +5,10 @@
 package optimizers
 
 import (
-	"planners"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
+// 谓词下推优化器，把filter条件往树上方移动 
 var PredicatePushDownOptimizer = Optimizer{
 	Name:        "PredicatePushDownOptimizer",
 	Description: "Push predicates to scan plan",
@@ -28,6 +29,7 @@ var PredicatePushDownOptimizer = Optimizer{
 			return
 		}
 
+		// 这样实现正确吗...我持怀疑态度
 		if scan != nil && filter != nil {
 			scan.Filter = filter
 		}

@@ -28,6 +28,7 @@ func (plan *SelectPlan) Build() error {
 	ast := plan.ast
 	tree := plan.SubPlan
 
+	// FROM查询语句 
 	// Source.
 	source, err := parseFrom(ast.From[0])
 	if err != nil {
@@ -35,12 +36,14 @@ func (plan *SelectPlan) Build() error {
 	}
 	tree.Add(source)
 
+	// 查询的字段都有哪些 
 	// Fields.
 	fields, err := parseFields(nil, ast.SelectExprs)
 	if err != nil {
 		return err
 	}
 
+	// 把alias的别名做成一张变量表，以方便后面能够引用得到 
 	// Aliases.
 	aliases, err := parseAliases(fields)
 	if err != nil {

@@ -7,10 +7,13 @@ package expressions
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/docs"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 
-	"base/docs"
-	"base/errors"
-	"datavalues"
+	//"base/docs"
+	//"base/errors"
+	//"datavalues"
 )
 
 type IValidator interface {

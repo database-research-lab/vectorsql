@@ -6,12 +6,12 @@ package executors
 
 import (
 	"context"
-
-	"base/xlog"
-	"config"
-	"sessions"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/sessions"
 )
 
+// ExecutorContext 执行器上下文
 type ExecutorContext struct {
 	log              *xlog.Log
 	ctx              context.Context
