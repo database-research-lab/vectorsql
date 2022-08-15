@@ -25,11 +25,11 @@ package sqlparser
 import (
 	"errors"
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser/dependency/sqltypes"
 	"strconv"
 	"strings"
 	"unicode"
 
-	"parsers/sqlparser/dependency/sqltypes"
 )
 
 // StatementType encodes the type of a SQL statement

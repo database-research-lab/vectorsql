@@ -5,10 +5,10 @@
 package datavalues
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/docs"
 	"strings"
 	"unsafe"
-
-	"base/docs"
+	//"base/docs"
 )
 
 type ValueTuple struct {

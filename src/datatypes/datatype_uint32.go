@@ -6,11 +6,14 @@ package datatypes
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/binary"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 	"io"
 
-	"base/binary"
-	"base/errors"
-	"datavalues"
+	//"base/binary"
+	//"base/errors"
+	//"datavalues"
 )
 
 const (

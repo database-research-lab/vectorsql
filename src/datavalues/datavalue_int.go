@@ -5,11 +5,12 @@
 package datavalues
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/docs"
+	"github.com/CC11001100/vectorsql/src/base/errors"
 	"strconv"
 	"unsafe"
-
-	"base/docs"
-	"base/errors"
+	//"base/docs"
+	//"base/errors"
 )
 
 type ValueInt int64
@@ -65,6 +66,7 @@ func (v *ValueInt) Document() docs.Documentation {
 	return docs.Text("Int")
 }
 
+// AsInt 转换为int类型
 func AsInt(v IDataValue) int64 {
 	switch t := v.(type) {
 	case *ValueInt:

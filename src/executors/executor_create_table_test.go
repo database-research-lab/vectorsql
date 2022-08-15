@@ -5,10 +5,12 @@
 package executors
 
 import (
-	"mocks"
+	"github.com/CC11001100/vectorsql/src/mocks"
+	"github.com/CC11001100/vectorsql/src/planners"
+	//"mocks"
 	"testing"
 
-	"planners"
+	//"planners"
 
 	"github.com/stretchr/testify/assert"
 )

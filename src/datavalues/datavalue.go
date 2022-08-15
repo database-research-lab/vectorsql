@@ -6,8 +6,8 @@ package datavalues
 
 import (
 	"fmt"
-
-	"base/docs"
+	"github.com/CC11001100/vectorsql/src/base/docs"
+	//"base/docs"
 )
 
 type Type int

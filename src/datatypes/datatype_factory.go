@@ -5,7 +5,8 @@
 package datatypes
 
 import (
-	"base/errors"
+	//"base/errors"
+	"github.com/CC11001100/vectorsql/src/base/errors"
 )
 
 type dataTypeCreator func() IDataType

@@ -6,10 +6,11 @@ package datavalues
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/lru"
 	"regexp"
 	"strings"
 
-	"base/lru"
+	//"base/lru"
 )
 
 var (

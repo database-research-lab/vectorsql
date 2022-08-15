@@ -6,10 +6,12 @@ package expressions
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/docs"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 	"strings"
 
-	"base/docs"
-	"datavalues"
+	//"base/docs"
+	//"datavalues"
 )
 
 type scalarUpdateFunc func(args ...datavalues.IDataValue) (datavalues.IDataValue, error)

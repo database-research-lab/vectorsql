@@ -5,11 +5,13 @@
 package datavalues
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/docs"
+	"github.com/CC11001100/vectorsql/src/base/errors"
 	"strconv"
 	"unsafe"
 
-	"base/docs"
-	"base/errors"
+	//"base/docs"
+	//"base/errors"
 )
 
 type ValueFloat float64

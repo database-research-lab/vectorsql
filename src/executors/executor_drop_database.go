@@ -5,11 +5,13 @@
 package executors
 
 import (
-	"databases"
-	"planners"
+	//"databases"
+	//"planners"
+	"github.com/CC11001100/vectorsql/src/databases"
+	"github.com/CC11001100/vectorsql/src/planners"
 )
 
-// 删除数据库执行器 
+// DropDatabaseExecutor 删除数据库执行器
 type DropDatabaseExecutor struct {
 	ctx  *ExecutorContext
 	plan *planners.DropDatabasePlan

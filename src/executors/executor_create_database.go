@@ -9,7 +9,7 @@ import (
 	"github.com/CC11001100/vectorsql/src/planners"
 )
 
-// 创建数据库的执行器 
+// CreateDatabaseExecutor 创建数据库的执行器
 type CreateDatabaseExecutor struct {
 	ctx  *ExecutorContext
 	plan *planners.CreateDatabasePlan
@@ -22,7 +22,7 @@ func NewCreateDatabaseExecutor(ctx *ExecutorContext, plan planners.IPlan) IExecu
 	}
 }
 
-// 在执行器中根据传递的参数创建数据库 
+// Execute 在执行器中根据传递的参数创建数据库
 func (executor *CreateDatabaseExecutor) Execute() (*Result, error) {
 	ectx := executor.ctx
 	ast := executor.plan.Ast

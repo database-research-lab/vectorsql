@@ -9,17 +9,30 @@ import (
 	"github.com/CC11001100/vectorsql/src/datavalues"
 )
 
+// IExpression 表示SQL中的一个表达式
 type IExpression interface {
+
+	// Eval 执行表达式
 	Eval() error
+
+	// Result 获取表达式的执行结果
 	Result() datavalues.IDataValue
+
+	// Update 设置表达式的参数
 	Update(params IParams) (datavalues.IDataValue, error)
+
+	// Merge 合并多个表达式的结果
 	Merge(arg IExpression) (datavalues.IDataValue, error)
+
 	Walk(visit Visit) error
+
 	String() string
+
+	// Document 表达式的执行结果
 	Document() docs.Documentation
 }
 
-type Visit func(e IExpression) (kontinue bool, err error)
+type Visit func(e IExpression) (isContinue bool, err error)
 
 func Walk(visit Visit, exprs ...IExpression) error {
 	for _, expr := range exprs {

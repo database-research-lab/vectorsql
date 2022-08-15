@@ -6,10 +6,13 @@ package executors
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/transforms"
 
-	"planners"
-	"processors"
-	"transforms"
+	//"planners"
+	//"processors"
+	//"transforms"
 )
 
 type FilterExecutor struct {

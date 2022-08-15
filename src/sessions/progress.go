@@ -5,10 +5,11 @@
 package sessions
 
 import (
-	"base/sync2"
+	//"base/sync2"
+	"github.com/CC11001100/vectorsql/src/base/sync2"
 )
 
-// 一些统计信息，为了成本优化的时候使用  
+// ProgressValues 一些统计信息，为了成本优化的时候使用
 type ProgressValues struct {
 
 	// 花费了多长时间  

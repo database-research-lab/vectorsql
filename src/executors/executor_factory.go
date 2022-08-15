@@ -5,11 +5,13 @@
 package executors
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/planners"
 	"reflect"
 
-	"planners"
+	//"planners"
 
-	"base/errors"
+	//"base/errors"
 )
 
 // 执行器的入口  

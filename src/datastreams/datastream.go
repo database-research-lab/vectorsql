@@ -5,7 +5,8 @@
 package datastreams
 
 import (
-	"datablocks"
+	//"datablocks"
+	"github.com/CC11001100/vectorsql/src/datablocks"
 )
 
 type IDataBlockInputStream interface {

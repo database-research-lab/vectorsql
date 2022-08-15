@@ -5,11 +5,14 @@
 package datastreams
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/binary"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/datablocks"
 	"io"
 
-	"base/binary"
-	"base/errors"
-	"datablocks"
+	//"base/binary"
+	//"base/errors"
+	//"datablocks"
 )
 
 type NativeBlockOutputStream struct {

@@ -6,9 +6,11 @@ package planners
 
 import (
 	"encoding/json"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/parsers/sqlparser"
 
-	"base/errors"
-	"parsers/sqlparser"
+	//"base/errors"
+	//"parsers/sqlparser"
 )
 
 type DropTablePlan struct {

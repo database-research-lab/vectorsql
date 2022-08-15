@@ -6,10 +6,12 @@ package datatypes
 
 import (
 	"bytes"
+	"github.com/CC11001100/vectorsql/src/base/binary"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 	"testing"
 
-	"base/binary"
-	"datavalues"
+	//"base/binary"
+	//"datavalues"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -9,7 +9,7 @@ import (
 	"github.com/CC11001100/vectorsql/src/planners"
 )
 
-// 创建表执行器
+// CreateTableExecutor 创建表执行器
 type CreateTableExecutor struct {
 	ctx  *ExecutorContext
 	plan *planners.CreateTablePlan

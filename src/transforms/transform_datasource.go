@@ -5,11 +5,14 @@
 package transforms
 
 import (
+	"github.com/CC11001100/vectorsql/src/datastreams"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"time"
 
-	"datastreams"
-	"processors"
-	"sessions"
+	//"datastreams"
+	//"processors"
+	//"sessions"
 )
 
 type DataSourceTransform struct {

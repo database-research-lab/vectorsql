@@ -5,9 +5,10 @@
 package expressions
 
 import (
+	"github.com/CC11001100/vectorsql/src/datavalues"
 	"testing"
 
-	"datavalues"
+	//"datavalues"
 
 	"github.com/stretchr/testify/assert"
 )

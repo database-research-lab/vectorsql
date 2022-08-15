@@ -1,11 +1,12 @@
 package expressions
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/docs"
 	"os"
 	"sort"
 	"testing"
 
-	"base/docs"
+	//"base/docs"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -5,11 +5,17 @@
 package columns
 
 import (
-	"datatypes"
+	//"datatypes"
+	"github.com/CC11001100/vectorsql/src/datatypes"
 )
 
+// Column 表示数据库中的一个列
 type Column struct {
-	Name     string
+
+	// 列的名字
+	Name string
+
+	// 列的数据类型
 	DataType datatypes.IDataType
 }
 

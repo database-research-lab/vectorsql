@@ -5,9 +5,10 @@
 package expressions
 
 import (
+	"github.com/CC11001100/vectorsql/src/base/errors"
 	"strings"
 
-	"base/errors"
+	//"base/errors"
 )
 
 type (

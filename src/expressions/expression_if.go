@@ -11,6 +11,7 @@ import (
 	"github.com/CC11001100/vectorsql/src/datavalues"
 )
 
+// IF 条件表达式
 func IF(args ...interface{}) IExpression {
 	exprs := expressionsFor(args...)
 	return &ScalarExpression{

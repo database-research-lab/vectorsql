@@ -5,8 +5,10 @@
 package datablocks
 
 import (
-	"columns"
-	"datavalues"
+	//"columns"
+	//"datavalues"
+	"github.com/CC11001100/vectorsql/src/columns"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 )
 
 type DataBlockColumnIterator struct {

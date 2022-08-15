@@ -5,8 +5,10 @@
 package expressions
 
 import (
-	"base/docs"
-	"datavalues"
+	//"base/docs"
+	//"datavalues"
+	"github.com/CC11001100/vectorsql/src/base/docs"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 )
 
 func LT(left interface{}, right interface{}) IExpression {

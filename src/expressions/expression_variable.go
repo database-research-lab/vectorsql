@@ -5,9 +5,12 @@
 package expressions
 
 import (
-	"base/docs"
-	"base/errors"
-	"datavalues"
+	"github.com/CC11001100/vectorsql/src/base/docs"
+	//"base/docs"
+	//"base/errors"
+	//"datavalues"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/datavalues"
 )
 
 type VariableExpression struct {
