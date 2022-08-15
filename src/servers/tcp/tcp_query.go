@@ -6,17 +6,18 @@ package tcp
 
 import (
 	"context"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datastreams"
+	"github.com/CC11001100/vectorsql/src/executors"
+	"github.com/CC11001100/vectorsql/src/optimizers"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/servers/protocol"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"sync"
 	"time"
 
-	"datablocks"
-	"datastreams"
-	"executors"
-	"optimizers"
-	"planners"
-	"processors"
-	"servers/protocol"
-	"sessions"
+
 )
 
 func (s *TCPHandler) processQuery(session *TCPSession) error {

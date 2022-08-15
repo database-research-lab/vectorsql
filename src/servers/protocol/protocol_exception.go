@@ -6,9 +6,11 @@ package protocol
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/binary"
+	"github.com/CC11001100/vectorsql/src/base/errors"
 
-	"base/binary"
-	"base/errors"
+	//"base/binary"
+	//"base/errors"
 )
 
 type ExceptionProtocol struct {

@@ -6,8 +6,7 @@ package tcp
 
 import (
 	"expvar"
-
-	"base/metric"
+	"github.com/CC11001100/vectorsql/src/base/metric"
 )
 
 var (

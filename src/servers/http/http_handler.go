@@ -6,13 +6,16 @@ package http
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
 	"io/ioutil"
 	"net/http"
 
-	"config"
-
-	"base/errors"
-	"base/xlog"
+	//"config"
+	//
+	//"base/errors"
+	//"base/xlog"
 )
 
 type HTTPHandler struct {

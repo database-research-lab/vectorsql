@@ -5,12 +5,11 @@
 package servers
 
 import (
-	"config"
-
-	"base/xlog"
-	"servers/debug"
-	"servers/http"
-	"servers/tcp"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/servers/debug"
+	"github.com/CC11001100/vectorsql/src/servers/http"
+	"github.com/CC11001100/vectorsql/src/servers/tcp"
 )
 
 type Server struct {

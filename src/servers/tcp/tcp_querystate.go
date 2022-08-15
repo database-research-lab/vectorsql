@@ -5,7 +5,7 @@
 package tcp
 
 import (
-	"executors"
+	"github.com/CC11001100/vectorsql/src/executors"
 )
 
 type QueryState struct {

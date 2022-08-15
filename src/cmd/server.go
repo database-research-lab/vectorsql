@@ -7,17 +7,22 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/humanize"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/databases"
+	"github.com/CC11001100/vectorsql/src/servers"
 	"os"
 	"os/signal"
 	"runtime"
 	"syscall"
 	"time"
 
-	"base/humanize"
-	"base/xlog"
-	"config"
-	"databases"
-	"servers"
+	//"base/humanize"
+	//"base/xlog"
+	//"config"
+	//"databases"
+	//"servers"
 )
 
 var (

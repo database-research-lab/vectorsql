@@ -6,17 +6,17 @@ package tcp
 
 import (
 	"expvar"
+	"github.com/CC11001100/vectorsql/src/base/binary"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/base/metric"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datastreams"
+	"github.com/CC11001100/vectorsql/src/servers/protocol"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"net"
 	"time"
 
-	"datablocks"
-	"datastreams"
-	"sessions"
 
-	"base/binary"
-	"base/errors"
-	"base/metric"
-	"servers/protocol"
 )
 
 type TCPSession struct {

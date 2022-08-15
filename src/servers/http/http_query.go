@@ -6,15 +6,22 @@ package http
 
 import (
 	"context"
+	"github.com/CC11001100/vectorsql/src/datablocks"
+	"github.com/CC11001100/vectorsql/src/datastreams"
+	"github.com/CC11001100/vectorsql/src/executors"
+	"github.com/CC11001100/vectorsql/src/optimizers"
+	"github.com/CC11001100/vectorsql/src/planners"
+	"github.com/CC11001100/vectorsql/src/processors"
+	"github.com/CC11001100/vectorsql/src/sessions"
 	"io"
 
-	"datablocks"
-	"datastreams"
-	"executors"
-	"optimizers"
-	"planners"
-	"processors"
-	"sessions"
+	//"datablocks"
+	//"datastreams"
+	//"executors"
+	//"optimizers"
+	//"planners"
+	//"processors"
+	//"sessions"
 )
 
 func (s *HTTPHandler) processQuery(query string, rw io.Writer) (err error) {

@@ -6,13 +6,14 @@ package tcp
 
 import (
 	"fmt"
+	"github.com/CC11001100/vectorsql/src/base/errors"
+	"github.com/CC11001100/vectorsql/src/base/xlog"
+	"github.com/CC11001100/vectorsql/src/config"
+	"github.com/CC11001100/vectorsql/src/servers/protocol"
 	"io"
 	"net"
 
-	"base/errors"
-	"base/xlog"
-	"config"
-	"servers/protocol"
+
 )
 
 type TCPHandler struct {
