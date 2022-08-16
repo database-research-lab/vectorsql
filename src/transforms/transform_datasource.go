@@ -9,12 +9,9 @@ import (
 	"github.com/CC11001100/vectorsql/src/processors"
 	"github.com/CC11001100/vectorsql/src/sessions"
 	"time"
-
-	//"datastreams"
-	//"processors"
-	//"sessions"
 )
 
+// DataSourceTransform 转换器可以认为是一种特殊的处理器，用来对数据流做变换的
 type DataSourceTransform struct {
 	ctx            *TransformContext
 	input          datastreams.IDataBlockInputStream

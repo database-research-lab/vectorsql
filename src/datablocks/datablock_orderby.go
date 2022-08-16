@@ -12,10 +12,9 @@ import (
 	"github.com/CC11001100/vectorsql/src/planners"
 	"sort"
 	"time"
-
-
 )
 
+// OrderByPlan 对数据块中的值排序，拍完序会根据limit把多余的值丢弃掉
 func (block *DataBlock) OrderByPlan(fields []string, plan *planners.OrderByPlan) error {
 	defer expvar.Get(metric_datablock_filter_sec).(metric.Metric).Record(time.Now())
 
@@ -104,11 +103,12 @@ func (block *DataBlock) OrderByPlan(fields []string, plan *planners.OrderByPlan)
 		return false
 	})
 
+	// 最终排好的顺序
 	// Final.
-	finalSeqs := make([]int, numRows)
+	finalSequences := make([]int, numRows)
 	for i, tuple := range matrix {
-		finalSeqs[i] = int(datavalues.AsInt(datavalues.AsSlice(tuple)[len(fields)]))
+		finalSequences[i] = int(datavalues.AsInt(datavalues.AsSlice(tuple)[len(fields)]))
 	}
-	block.seqs = finalSeqs
+	block.seqs = finalSequences
 	return nil
 }

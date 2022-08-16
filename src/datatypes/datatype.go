@@ -5,9 +5,6 @@
 package datatypes
 
 import (
-	//"base/binary"
-	//"base/errors"
-	//"datavalues"
 	"github.com/CC11001100/vectorsql/src/base/binary"
 	"github.com/CC11001100/vectorsql/src/base/errors"
 	"github.com/CC11001100/vectorsql/src/datavalues"

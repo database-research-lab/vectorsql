@@ -10,13 +10,15 @@ import (
 	"github.com/CC11001100/vectorsql/src/processors"
 	"github.com/CC11001100/vectorsql/src/sessions"
 	"time"
-
-
 )
 
+// OrderByTransform 排序处理器
 type OrderByTransform struct {
-	ctx            *TransformContext
-	plan           *planners.OrderByPlan
+	ctx *TransformContext
+
+	// order by 对应的执行计划
+	plan *planners.OrderByPlan
+
 	progressValues sessions.ProgressValues
 	processors.BaseProcessor
 }
@@ -36,6 +38,7 @@ func (t *OrderByTransform) Execute() {
 	out := t.Out()
 	defer out.Close()
 
+	// 获取order by的字段，如果出错了就中断执行万事大吉
 	// Get all base fields by the expression.
 	fields, err := planners.BuildVariableValues(plan)
 	if err != nil {
@@ -43,6 +46,7 @@ func (t *OrderByTransform) Execute() {
 		return
 	}
 
+	// 先持有着每一条输出结果
 	onNext := func(x interface{}) {
 		switch y := x.(type) {
 		case *datablocks.DataBlock:
@@ -57,6 +61,8 @@ func (t *OrderByTransform) Execute() {
 			out.Send(y)
 		}
 	}
+
+	// 在所有的结果读取完毕之后，进行排序，截取需要的结果
 	onDone := func() {
 		if block != nil {
 			start := time.Now()

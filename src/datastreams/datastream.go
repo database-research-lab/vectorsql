@@ -5,11 +5,10 @@
 package datastreams
 
 import (
-	//"datablocks"
 	"github.com/CC11001100/vectorsql/src/datablocks"
 )
 
-// IDataBlockInputStream 块输入流，用于读取记录序列化之后的数据
+// IDataBlockInputStream 块输入流，用于读取记录序列化之后的数据，可能会有多个实现
 type IDataBlockInputStream interface {
 	Name() string
 
@@ -20,7 +19,7 @@ type IDataBlockInputStream interface {
 	Close()
 }
 
-// IDataBlockOutputStream 块输出流，用于保存记录序列化之后的数据
+// IDataBlockOutputStream 块输出流，用于保存记录序列化之后的数据，可能会有多个实现
 type IDataBlockOutputStream interface {
 	Name() string
 	Write(*datablocks.DataBlock) error

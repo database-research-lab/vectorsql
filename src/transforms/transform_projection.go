@@ -10,12 +10,15 @@ import (
 	"github.com/CC11001100/vectorsql/src/processors"
 	"github.com/CC11001100/vectorsql/src/sessions"
 	"time"
-
 )
 
+// ProjectionTransform 选择列的处理器，用于收缩结果的规模
 type ProjectionTransform struct {
-	ctx            *TransformContext
-	plan           *planners.ProjectionPlan
+	ctx *TransformContext
+
+	// 投影所对应的执行计划
+	plan *planners.ProjectionPlan
+
 	progressValues sessions.ProgressValues
 	processors.BaseProcessor
 }
@@ -29,13 +32,16 @@ func NewProjectionTransform(ctx *TransformContext, plan *planners.ProjectionPlan
 }
 
 func (t *ProjectionTransform) Execute() {
-	out := t.Out()
 
+	out := t.Out()
 	defer out.Close()
+
+	// 对接收到的每条结果收缩列规模
 	onNext := func(x interface{}) {
 		switch y := x.(type) {
 		case *datablocks.DataBlock:
 			start := time.Now()
+			// 啊草咋都是在Block里实现的啊，总感觉这个职责划分不太对...
 			if block, err := y.ProjectionByPlan(t.plan.Projections); err != nil {
 				out.Send(err)
 			} else {
@@ -47,6 +53,7 @@ func (t *ProjectionTransform) Execute() {
 				out.Send(block)
 			}
 		default:
+			// 啊哈哈哈如果是自己理解不了的，就直接透传给后面的处理器
 			out.Send(x)
 		}
 	}

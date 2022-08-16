@@ -62,7 +62,7 @@ func TestLimitTransfrom(t *testing.T) {
 			stream := mocks.NewMockBlockInputStream(test.source)
 			datasource := NewDataSourceTransform(ctx, stream)
 
-			limit := NewLimitransform(ctx, test.plan.(*planners.LimitPlan))
+			limit := NewLimitTransform(ctx, test.plan.(*planners.LimitPlan))
 
 			sink := processors.NewSink("sink")
 			pipeline := processors.NewPipeline(context.Background())
@@ -78,7 +78,7 @@ func TestLimitTransfrom(t *testing.T) {
 				return nil
 			})
 			assert.Nil(t, err)
-			stats := limit.(*Limitransform).Stats()
+			stats := limit.(*LimitTransform).Stats()
 			assert.True(t, stats.TotalRowsToRead.Get() > 0)
 		})
 	}

@@ -10,14 +10,19 @@ import (
 	"github.com/CC11001100/vectorsql/src/columns"
 	"github.com/CC11001100/vectorsql/src/datavalues"
 	"sync"
-
 )
 
+// DataBlock 表示一个数据块，一个数据块中可能会有多个值，一个值认为是一行数据，合起来称之为一个块
 type DataBlock struct {
-	mu         sync.RWMutex
-	seqs       []int
-	info       *DataBlockInfo
-	values     []*DataBlockValue
+	mu sync.RWMutex
+
+	// TODO 似乎决定着values的顺序？
+	seqs []int
+
+	info *DataBlockInfo
+
+	values []*DataBlockValue
+
 	totalBytes uint64
 }
 

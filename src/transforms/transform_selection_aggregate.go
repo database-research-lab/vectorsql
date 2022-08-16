@@ -19,7 +19,9 @@ import (
 
 type AggregateSelectionTransform struct {
 	ctx            *TransformContext
+
 	plan           *planners.SelectionPlan
+
 	progressValues sessions.ProgressValues
 	processors.BaseProcessor
 }
@@ -33,11 +35,15 @@ func NewAggregateSelectionTransform(ctx *TransformContext, plan *planners.Select
 }
 
 func (t *AggregateSelectionTransform) Execute() {
+
 	ctx := t.ctx
+
 	out := t.Out()
 	defer out.Close()
+
 	plan := t.plan
 
+	// 把要聚合的所有列取出来
 	// Get all base fields by the expression.
 	fields, err := planners.BuildVariableValues(plan.Projects)
 	if err != nil {

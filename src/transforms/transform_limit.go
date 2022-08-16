@@ -10,26 +10,30 @@ import (
 	"github.com/CC11001100/vectorsql/src/processors"
 	"github.com/CC11001100/vectorsql/src/sessions"
 	"time"
-
-
 )
 
-type Limitransform struct {
-	ctx            *TransformContext
-	plan           *planners.LimitPlan
+// LimitTransform 名字修改为正常的了，不要黑客文化了...
+// 限制返回的结果条数
+type LimitTransform struct {
+	ctx *TransformContext
+
+	// limit的执行计划
+	plan *planners.LimitPlan
+
+	// 统计相关的一些信息，可以忽略掉...
 	progressValues sessions.ProgressValues
 	processors.BaseProcessor
 }
 
-func NewLimitransform(ctx *TransformContext, plan *planners.LimitPlan) processors.IProcessor {
-	return &Limitransform{
+func NewLimitTransform(ctx *TransformContext, plan *planners.LimitPlan) processors.IProcessor {
+	return &LimitTransform{
 		ctx:           ctx,
 		plan:          plan,
 		BaseProcessor: processors.NewBaseProcessor("transform_limit"),
 	}
 }
 
-func (t *Limitransform) Execute() {
+func (t *LimitTransform) Execute() {
 	var (
 		limit  int
 		offset int
@@ -69,6 +73,6 @@ func (t *Limitransform) Execute() {
 	t.Subscribe(onNext)
 }
 
-func (t *Limitransform) Stats() sessions.ProgressValues {
+func (t *LimitTransform) Stats() sessions.ProgressValues {
 	return t.progressValues
 }

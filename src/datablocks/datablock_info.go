@@ -9,6 +9,7 @@ import (
 	"github.com/CC11001100/vectorsql/src/base/errors"
 )
 
+// DataBlockInfo 数据库块的元信息描述
 type DataBlockInfo struct {
 	Num1        uint64
 	IsOverflows bool

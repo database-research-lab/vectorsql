@@ -10,9 +10,11 @@ import (
 	"github.com/CC11001100/vectorsql/src/planners"
 )
 
+// ProjectionByPlan 根据投影执行计划裁剪列
 func (block *DataBlock) ProjectionByPlan(plan *planners.MapPlan) (*DataBlock, error) {
 	projects := plan
 
+	// 把投影中涉及到的列取出来
 	// Build the project exprs.
 	exprs, err := planners.BuildExpressions(projects)
 	if err != nil {

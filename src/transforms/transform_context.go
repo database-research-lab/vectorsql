@@ -9,12 +9,9 @@ import (
 	"github.com/CC11001100/vectorsql/src/base/xlog"
 	"github.com/CC11001100/vectorsql/src/config"
 	"github.com/CC11001100/vectorsql/src/sessions"
-
-	//"base/xlog"
-	//"config"
-	//"sessions"
 )
 
+// TransformContext 转换器的上下文，似乎也没啥需要特别关注的东西...
 type TransformContext struct {
 	ctx              context.Context
 	log              *xlog.Log

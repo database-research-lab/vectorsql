@@ -9,10 +9,10 @@ import (
 	"github.com/CC11001100/vectorsql/src/planners"
 	"sync"
 
-
 	"github.com/gammazero/workerpool"
 )
 
+// AggregateSelectionByPlan 聚合，杂聚？
 func (block *DataBlock) AggregateSelectionByPlan(fields []string, plan *planners.SelectionPlan) ([]expressions.IExpression, error) {
 	var errs []error
 	var mu sync.Mutex

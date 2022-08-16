@@ -10,12 +10,12 @@ import (
 	"time"
 )
 
-// 
 type (
 	NextFunc     func(interface{})
 	DoneFunc     func()
 	EventHandler interface{}
 
+	// BaseProcessor Processor的适配器，这样再下层的struct就可以只实现自己需要的方法了
 	BaseProcessor struct {
 		in          *InPort
 		out         *OutPort

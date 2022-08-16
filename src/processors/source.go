@@ -4,8 +4,7 @@
 
 package processors
 
-import ()
-
+// Source 表示一个数据源
 type Source struct {
 	BaseProcessor
 }

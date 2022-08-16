@@ -10,12 +10,21 @@ import (
 )
 
 type ColumnIndex struct {
+
+	// 列名
 	Name  string
+
+	// 列顺序下表
 	Index int
 }
 
+// DataBlockValue 用于表示数据块中的一个值
 type DataBlockValue struct {
+
+	// 这个值所对应的列信息
 	column *columns.Column
+
+	// 值对应的值...我草好绕
 	values []datavalues.IDataValue
 }
 

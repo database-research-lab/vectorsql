@@ -29,7 +29,7 @@ func (executor *LimitExecutor) Execute() (*Result, error) {
 	conf := executor.ctx.conf
 
 	transformCtx := transforms.NewTransformContext(executor.ctx.ctx, log, conf)
-	transform := transforms.NewLimitransform(transformCtx, executor.plan)
+	transform := transforms.NewLimitTransform(transformCtx, executor.plan)
 	executor.transformer = transform
 
 	result := NewResult()
@@ -38,6 +38,6 @@ func (executor *LimitExecutor) Execute() (*Result, error) {
 }
 
 func (executor *LimitExecutor) String() string {
-	transformer := executor.transformer.(*transforms.Limitransform)
+	transformer := executor.transformer.(*transforms.LimitTransform)
 	return fmt.Sprintf("(%v, stats:%+v)", transformer.Name(), transformer.Stats())
 }

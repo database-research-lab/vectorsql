@@ -4,8 +4,7 @@
 
 package processors
 
-import ()
-
+// Sink 用于输出数据的
 type Sink struct {
 	BaseProcessor
 }

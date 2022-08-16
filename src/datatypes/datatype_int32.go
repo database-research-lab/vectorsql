@@ -10,10 +10,6 @@ import (
 	"github.com/CC11001100/vectorsql/src/base/errors"
 	"github.com/CC11001100/vectorsql/src/datavalues"
 	"io"
-
-	//"base/binary"
-	//"base/errors"
-	//"datavalues"
 )
 
 const (

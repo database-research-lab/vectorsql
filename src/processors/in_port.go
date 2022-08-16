@@ -8,6 +8,7 @@ import (
 	"sync"
 )
 
+// InPort 用来表示一个输入流，给Processor提供数据输入
 type InPort struct {
 	mu          sync.Mutex
 	ch          chan interface{}
@@ -39,6 +40,7 @@ func (pt *InPort) From(rpt *OutPort) {
 	pt.AddEdge(rpt)
 }
 
+// Send 往输入流中写入数据
 func (pt *InPort) Send(v interface{}) {
 	pt.mu.Lock()
 	defer pt.mu.Unlock()
@@ -49,6 +51,7 @@ func (pt *InPort) Send(v interface{}) {
 	pt.ch <- v
 }
 
+// Recv 从输入流中读取数据
 func (pt *InPort) Recv() <-chan interface{} {
 	return pt.ch
 }
@@ -56,6 +59,7 @@ func (pt *InPort) Recv() <-chan interface{} {
 func (pt *InPort) Close() {
 	pt.mu.Lock()
 	defer pt.mu.Unlock()
+
 	if !pt.closed {
 		pt.closeCounts++
 		if pt.closeCounts >= len(pt.edges) {
